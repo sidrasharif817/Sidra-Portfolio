@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sidra Sharif | Frontend Developer</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<style>
+:root{
+  --bg:#020617;
+  --card:#0f172a;
+  --primary:#38bdf8;
+  --secondary:#818cf8;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --highlight1:#fbbf24;
+  --highlight2:#f472b6;
+  --highlight3:#22c55e;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);line-height:1.7;}
+header{position:sticky;top:0;z-index:100;background:rgba(15,23,42,0.95);backdrop-filter:blur(8px);padding:18px 10%;display:flex;justify-content:space-between;align-items:center;}
+header h2{color:var(--primary);font-size:22px;font-weight:600;}
+nav a{color:var(--text);margin-left:18px;text-decoration:none;font-weight:500;}
+nav a:hover{color:var(--primary);}
+
+section{padding:100px 10%;}
+h2{text-align:center;margin-bottom:20px;font-size:2rem;}
+h2 span{background:linear-gradient(90deg,var(--highlight1),var(--highlight2),var(--highlight3));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+
+/* HERO */
+.hero{display:flex;align-items:center;gap:50px;flex-wrap:wrap;}
+.hero-text{flex:1;min-width:280px;}
+.hero-text h1{font-size:2.8rem;background:linear-gradient(90deg,var(--highlight1),var(--highlight2),var(--highlight3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-text p{margin:18px 0;color:var(--muted);max-width:520px;}
+
+.btn{display:inline-block;padding:14px 34px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#020617;border-radius:30px;font-weight:600;text-decoration:none;transition:.3s;}
+.btn:hover{background: linear-gradient(90deg, #fbbf24, #f472b6, #22c55e);color: #fff;transform: translateY(-4px);}
+
+.hero-img img{width:340px;height:340px;border-radius:50%;object-fit:cover;box-shadow:0 25px 80px rgba(56,189,248,0.45);transition: transform 0.4s ease, box-shadow 0.4s ease;}
+.hero-img img:hover{transform: scale(1.08);box-shadow: 0 35px 100px rgba(56,189,248,0.7);}
+
+/* ABOUT */
+#about{max-width:900px;margin:auto;text-align:center;}
+#about p{margin-top:16px;color:#cbd5e1;font-size:1.05rem;}
+
+/* GRID & CARDS */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:35px;margin-top:50px;}
+.card{background:linear-gradient(145deg,#0f172a,#020617);padding:40px;border-radius:24px;box-shadow:0 15px 40px rgba(0,0,0,0.6);transition:.4s ease;}
+.card:hover{transform:translateY(-14px);box-shadow:0 30px 80px rgba(56,189,248,0.45);}
+.card h3{color:var(--primary);margin-bottom:12px;font-size:1.25rem;}
+.card p{color:#cbd5f5;font-size:15px;}
+
+/* CONTACT */
+form{max-width:480px;margin:auto;display:grid;gap:15px;margin-top:40px;}
+input,textarea,button{padding:14px;border-radius:12px;border:none;font-size:14px;}
+button{background:var(--primary);font-weight:600;cursor:pointer;transition:.3s;}
+button:hover{background: linear-gradient(90deg, #fbbf24, #f472b6, #22c55e);color: #fff;transform: translateY(-3px);}
+
+/* FOOTER */
+footer{background:#0f172a;text-align:center;padding:60px 10%;margin-top:80px;display:flex;flex-direction:column;align-items:center;gap:12px;}
+footer h3{color:var(--primary);margin-bottom:6px;}
+footer p{color:var(--muted);font-size:14px;max-width:550px;}
+.social-links{display:flex;justify-content:center;gap:14px;margin-top:10px;}
+.social-links a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(56,189,248,0.18);color:#38bdf8;font-size:18px;transition:all 0.3s ease;}
+.social-links a:hover{background:#38bdf8;color:#020617;transform:translateY(-4px);}
+
+@media(max-width:768px){.hero{text-align:center;}}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Sidra Sharif</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#cv">CV</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Frontend Developer<br><span>Building Modern Web Interfaces</span></h1>
+    <p>BSCS student & frontend developer creating fast, responsive and user-friendly websites.</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+  <div class="hero-img">
+    <img src="WhatsApp Image 2026-01-04 at 16.59.38.jpeg" alt="Sidra Sharif">
+  </div>
+</section>
+
+<section id="about">
+  <h2>About <span>Me</span></h2>
+  <p>
+    Passionate frontend developer with strong foundations in HTML, CSS, JavaScript, Bootstrap, and React JS.
+    I focus on building responsive, scalable, and interactive web interfaces with animations, hover effects, and modern layouts.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Technical <span>Skills</span></h2>
+  <div class="grid">
+    <div class="card"><h3>HTML5</h3><p>Semantic structure, accessibility, SEO-friendly markup.</p></div>
+    <div class="card"><h3>CSS3</h3><p>Flexbox, Grid, animations, responsive layouts, UI effects.</p></div>
+    <div class="card"><h3>JavaScript</h3><p>ES6+, DOM manipulation, events, interactive logic.</p></div>
+    <div class="card"><h3>React JS</h3><p>Components, JSX, props, hooks basics.</p></div>
+    <div class="card"><h3>Bootstrap</h3><p>Fast responsive layouts using grid system and components.</p></div>
+    <div class="card"><h3>Git & GitHub</h3><p>Version control, repositories, collaboration.</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Featured <span>Projects</span></h2>
+  <div class="grid">
+    <div class="card"><h3>Animated Portfolio</h3><p>Portfolio with smooth animations, responsive layout, dark/light mode, 3D card effects.</p></div>
+    <div class="card"><h3>Landing Pages</h3><p>Professional landing pages for apps, products, businesses with responsive design.</p></div>
+    <div class="card"><h3>Mini JavaScript Apps</h3><p>Small interactive apps like calculator, to-do list, counters.</p></div>
+    <div class="card"><h3>UI Components</h3><p>Reusable cards, buttons, modals, navigation bars.</p></div>
+    <div class="card"><h3>Nankana Sahib Website</h3><p>Responsive informational website about Nankana Sahib.</p></div>
+    <div class="card"><h3>Blog Template</h3><p>Clean blog template using HTML, CSS, Bootstrap.</p></div>
+    <div class="card"><h3>E-commerce Mockup</h3><p>Interactive e-commerce page with dynamic product cards.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact <span>Me</span></h2>
+  <form id="contactForm" onsubmit="sendMsg(event)">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<section id="cv">
+  <h2>My <span>CV</span></h2>
+  <p style="text-align:center; margin-bottom:25px; color:#cbd5e1;">Click the button below to download my CV.</p>
+  <div style="text-align:center;">
+    <a href="Sidra_Sharif_CV.pdf" download class="btn">Download My CV</a>
+  </div>
+</section>
+
+<footer>
+  <h3>Sidra Sharif</h3>
+  <p>Frontend Developer | BSCS Student</p>
+  <p style="background:linear-gradient(90deg,var(--highlight1),var(--highlight2),var(--highlight3));
+     -webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+     Passionate about creating modern, responsive, user-friendly interfaces. Skilled in HTML, CSS, JS, Bootstrap, React JS.
+  </p>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/sidra-sharif-muhammad-sharif-b3503a324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.facebook.com/share/1FYpzWCbfG/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/aliahmad.sharif?utm_source=qr&igsh=MTVodzRybjBrNjRsdg==" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@sidrasharifsidrasharif?si=3zph_CIybFvFiD6N" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+  <p>© 2026 Sidra Sharif. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+(function(){
+   emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+})();
+
+function sendMsg(e){
+  e.preventDefault();
+  emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', e.target) // Replace with your Service & Template ID
+    .then(function(response) {
+       alert("Message sent successfully!");
+    }, function(error) {
+       alert("Oops... Something went wrong.", error);
+    });
+}
+</script>
+
+</body>
+</html>
